@@ -3,5 +3,6 @@ function getComputerChoice() {
     }
 
 function getHumanChoice() {
-        prompt("Please type: Rock or Paper or Scissors");
+        let choice = prompt("Please type: Rock or Paper or Scissors");
+        return choice; 
     }

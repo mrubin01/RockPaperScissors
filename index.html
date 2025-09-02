@@ -20,6 +20,18 @@
         console.log("Scissors!");
     }
 
+    let human_choice = getHumanChoice(); 
+
+    if (human_choice === "Rock" || human_choice === "rock") {
+        console.log("You chose ROCK"); 
+    } else if (human_choice === "Paper" || human_choice === "paper") {
+        console.log("You chose PAPER"); 
+    } else if (human_choice === "Scissors" || human_choice === "scissors") {
+        console.log("You chose SCISSORS"); 
+    } else {
+        console.log("Your choice is not valid, sorry!");
+    }
+
   </script>
 
 </body>

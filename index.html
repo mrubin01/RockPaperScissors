@@ -16,24 +16,32 @@
 
     for (i = 5; i > 0; i--) {
 
-        const computer_choice = parseFloat(getComputerChoice());
+        const computer_output = parseFloat(getComputerChoice());
+        let computer_choice = "";
 
-        if (computer_choice < 0.34) {
-            console.log("Rock!");
-        } else if (computer_choice < 0.67) {
-            console.log("Paper!");
+        if (computer_output < 0.34) {
+            console.log("Rock!")
+            computer_choice = "ROCK"; 
+        } else if (computer_output < 0.67) {
+            console.log("Paper!")
+            computer_choice = "PAPER"; 
         } else {
-            console.log("Scissors!");
+            console.log("Scissors!")
+            computer_choice = "SCISSORS"; 
         }
-
-        const human_choice = getHumanChoice(); 
+        
+        const human_input = getHumanChoice(); 
+        let human_choice = ""; 
 
         if (human_choice.toUpperCase() === "ROCK") {
-            console.log("You chose ROCK"); 
+            console.log("You chose ROCK")
+            human_choice = "ROCK";
         } else if (human_choice.toUpperCase() === "PAPER") {
-            console.log("You chose PAPER"); 
+            console.log("You chose PAPER")
+            human_choice = "PAPER";
         } else if (human_choice.toUpperCase() === "SCISSORS") {
-            console.log("You chose SCISSORS"); 
+            console.log("You chose SCISSORS")
+            human_choice = "SCISSORS";
         } else {
             console.log("Your choice is NOT VALID, sorry!");
         }
@@ -51,7 +59,7 @@
         }
     }
 
-    
+
 
   </script>
 

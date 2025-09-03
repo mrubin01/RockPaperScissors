@@ -8,25 +8,28 @@ function getHumanChoice() {
     }
 
 function playRound(computerChoice, humanChoice) {
-        if (computerChoice.toUpperCase() === humanChoice.toUpperCase()) {
+        computerChoice = computerChoice.toUpperCase();
+        humanChoice = humanChoice.toUpperCase();
+
+        if (computerChoice === humanChoice) {
             console.log("DRAW!!!")
             return "draw";
-        } else if (computerChoice.toUpperCase() === "ROCK" && humanChoice.toUpperCase() === "PAPER") {
+        } else if (computerChoice === "ROCK" && humanChoice === "PAPER") {
             console.log("Rock vs Paper: HUMAN WINS!!!")
             return "human";
-        } else if (computerChoice.toUpperCase() === "ROCK" && humanChoice.toUpperCase() === "SCISSORS") {
+        } else if (computerChoice === "ROCK" && humanChoice === "SCISSORS") {
             console.log("Rock vs Scissors: COMPUTER WINS!!!")
             return "computer";
-        } else if (computerChoice.toUpperCase() === "PAPER" && humanChoice.toUpperCase() === "ROCK") {
+        } else if (computerChoice === "PAPER" && humanChoice === "ROCK") {
             console.log("Paper vs Rock: COMPUTER WINS!!!")
             return "computer";
-        } else if (computerChoice.toUpperCase() === "PAPER" && humanChoice.toUpperCase() === "SCISSORS") {
+        } else if (computerChoice === "PAPER" && humanChoice === "SCISSORS") {
             console.log("Paper vs Scissors: HUMAN WINS!!!")
             return "human";
-        } else if (computerChoice.toUpperCase() === "SCISSORS" && humanChoice.toUpperCase() === "PAPER") {
+        } else if (computerChoice === "SCISSORS" && humanChoice === "PAPER") {
             console.log("Scissors vs Paper: COMPUTER WINS!!!")
             return "computer";
-        } else if (computerChoice.toUpperCase() === "SCISSORS" && humanChoice.toUpperCase() === "ROCK") {
+        } else if (computerChoice === "SCISSORS" && humanChoice === "ROCK") {
             console.log("Scissors vs Rock: HUMAN WINS!!!")
             return "human";
         }

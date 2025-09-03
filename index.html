@@ -13,28 +13,45 @@
 
     let computer_score = 0;
     let human_score = 0;
+
+    for (i = 5; i > 0; i--) {
+
+        const computer_choice = parseFloat(getComputerChoice());
+
+        if (computer_choice < 0.34) {
+            console.log("Rock!");
+        } else if (computer_choice < 0.67) {
+            console.log("Paper!");
+        } else {
+            console.log("Scissors!");
+        }
+
+        const human_choice = getHumanChoice(); 
+
+        if (human_choice.toUpperCase() === "ROCK") {
+            console.log("You chose ROCK"); 
+        } else if (human_choice.toUpperCase() === "PAPER") {
+            console.log("You chose PAPER"); 
+        } else if (human_choice.toUpperCase() === "SCISSORS") {
+            console.log("You chose SCISSORS"); 
+        } else {
+            console.log("Your choice is NOT VALID, sorry!");
+        }
+
+        const round_result = playRound(computer_choice, human_choice)
+
+        if (round_result === "draw") {
+            console.log("This is a draw: no winner!");
+        } else if (round_result === "computer") {
+            console.log("Computer wins!")
+            computer_score++;
+        } else if (round_result === "human") {
+            console.log("Human wins!")
+            human_score++;
+        }
+    }
+
     
-    let computer_choice = parseFloat(getComputerChoice());
-
-    if (computer_choice < 0.34) {
-        console.log("Rock!");
-    } else if (computer_choice < 0.67) {
-        console.log("Paper!");
-    } else {
-        console.log("Scissors!");
-    }
-
-    let human_choice = getHumanChoice(); 
-
-    if (human_choice.toUpperCase() === "ROCK") {
-        console.log("You chose ROCK"); 
-    } else if (human_choice.toUpperCase() === "PAPER") {
-        console.log("You chose PAPER"); 
-    } else if (human_choice.toUpperCase() === "SCISSORS") {
-        console.log("You chose SCISSORS"); 
-    } else {
-        console.log("Your choice is NOT VALID, sorry!");
-    }
 
   </script>
 

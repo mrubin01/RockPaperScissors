@@ -20,13 +20,13 @@
         let computer_choice = "";
 
         if (computer_output < 0.34) {
-            console.log("Rock!")
+            console.log("Computer choice is Rock!")
             computer_choice = "ROCK"; 
         } else if (computer_output < 0.67) {
-            console.log("Paper!")
+            console.log("Computer choice is Paper!")
             computer_choice = "PAPER"; 
         } else {
-            console.log("Scissors!")
+            console.log("Computer choice is Scissors!")
             computer_choice = "SCISSORS"; 
         }
         
@@ -45,17 +45,16 @@
             human_choice = "SCISSORS";
         } else {
             console.log("Your choice is NOT VALID, sorry!");
+            break
         }
 
         const round_result = playRound(computer_choice, human_choice)
 
         if (round_result === "draw") {
-            console.log("This is a draw: no winner!");
+            console.log("No winner!");
         } else if (round_result === "computer") {
-            console.log("Computer wins!")
             computer_score++;
         } else if (round_result === "human") {
-            console.log("Human wins!")
             human_score++;
         } else {
             console.log("Something is not right!"); 

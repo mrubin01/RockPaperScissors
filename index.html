@@ -26,52 +26,41 @@
 
 
 
-        // for (i = 5; i > 0; i--) {
+        for (i = 5; i > 0; i--) {
 
-        //     const computer_output = parseFloat(getComputerChoice());
-        //     let computer_choice = "";
+            const computer_output = getComputerChoice();
 
-        //     if (computer_output < 0.34) {
-        //         console.log("Computer choice is Rock!")
-        //         computer_choice = "ROCK"; 
-        //     } else if (computer_output < 0.67) {
-        //         console.log("Computer choice is Paper!")
-        //         computer_choice = "PAPER"; 
-        //     } else {
-        //         console.log("Computer choice is Scissors!")
-        //         computer_choice = "SCISSORS"; 
-        //     }
             
-        //     const human_input = getHumanChoice(); 
-        //     let human_choice = ""; 
+            // const human_input = getHumanChoice(); 
+            // let human_choice = ""; 
 
 
-        //     if (human_input.toUpperCase() === "ROCK") {
-        //         console.log("You chose ROCK")
-        //         human_choice = "ROCK";
-        //     } else if (human_input.toUpperCase() === "PAPER") {
-        //         console.log("You chose PAPER")
-        //         human_choice = "PAPER";
-        //     } else if (human_input.toUpperCase() === "SCISSORS") {
-        //         console.log("You chose SCISSORS")
-        //         human_choice = "SCISSORS";
-        //     } else {
-        //         console.log("Your choice is NOT VALID, sorry!");
-        //         continue
-        //     }
+            // if (human_input.toUpperCase() === "ROCK") {
+            //     console.log("You chose ROCK")
+            //     human_choice = "ROCK";
+            // } else if (human_input.toUpperCase() === "PAPER") {
+            //     console.log("You chose PAPER")
+            //     human_choice = "PAPER";
+            // } else if (human_input.toUpperCase() === "SCISSORS") {
+            //     console.log("You chose SCISSORS")
+            //     human_choice = "SCISSORS";
+            // } else {
+            //     console.log("Your choice is NOT VALID, sorry!");
+            //     continue
+            // }
 
-        //     const round_result = playRound(computer_choice, human_choice)
+            const round_result = playRound(computer_choice, human_choice)
 
-        //     if (round_result === "draw") {
-        //         console.log("No winner!");
-        //     } else if (round_result === "computer") {
-        //         computer_score++;
-        //     } else if (round_result === "human") {
-        //         human_score++;
-        //     } else {
-        //         console.log("Something is not right!"); 
-        //     }
-        // }
+            if (round_result === "draw") {
+                console.log("No winner!");
+            } else if (round_result === "computer") {
+                computer_score++;
+            } else if (round_result === "human") {
+                human_score++;
+            } else {
+                console.log("Something is not right!"); 
+            }
+        }
 
         // console.log("Computer final score: " + computer_score);
         // console.log("Human final score: " + human_score); 

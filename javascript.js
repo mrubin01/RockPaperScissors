@@ -6,9 +6,28 @@ document.querySelectorAll("#container button").forEach(button => {
     })
 })
 
-function getComputerChoice() {
+function getRandomNumber() {
         return Math.random();
     }
+
+function getComputerChoice() {
+    let rand = parseFloat(getRandomNumber());
+    let computer_choice = "";
+
+    if (rand < 0.34) {
+        console.log("Computer choice is Rock!")
+        computer_choice = "ROCK"; 
+    } else if (rand < 0.67) {
+        console.log("Computer choice is Paper!")
+        computer_choice = "PAPER"; 
+    } else {
+        console.log("Computer choice is Scissors!")
+        computer_choice = "SCISSORS"; 
+    }
+
+    return computer_choice
+
+}
 
 // function getHumanChoice() {
 //         let choice = prompt("Please type: Rock or Paper or Scissors");

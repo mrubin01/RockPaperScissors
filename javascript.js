@@ -1,11 +1,19 @@
+document.querySelectorAll("#container button").forEach(button => {
+    button.addEventListener("click", () => {
+        const humanChoice = button.id; 
+        const computerChoice = getComputerChoice();
+        playRound(computerChoice, humanChoice); 
+    })
+})
+
 function getComputerChoice() {
         return Math.random();
     }
 
-function getHumanChoice() {
-        let choice = prompt("Please type: Rock or Paper or Scissors");
-        return choice; 
-    }
+// function getHumanChoice() {
+//         let choice = prompt("Please type: Rock or Paper or Scissors");
+//         return choice; 
+//     }
 
 function playRound(computerChoice, humanChoice) {
         computerChoice = computerChoice.toUpperCase();

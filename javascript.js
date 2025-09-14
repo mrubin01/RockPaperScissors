@@ -30,25 +30,25 @@ function getComputerChoice() {
 //     }
 
 function playRound(computerChoice, humanChoice) {
-        computerChoice = computerChoice.toUpperCase();
-        humanChoice = humanChoice.toUpperCase();
-        let resultMessage = "";
+    computerChoice = computerChoice.toUpperCase();
+    humanChoice = humanChoice.toUpperCase();
+    let resultMessage = "";
 
-        if (computerChoice === humanChoice) {
-            resultMessage = `Draw! You both chose ${humanChoice}`;
-        } else if (
-            (humanChoice === "ROCK" && computerChoice === "SCISSORS") ||
-            (humanChoice === "PAPER" && computerChoice === "ROCK") ||
-            (humanChoice === "SCISSORS" && computerChoice === "PAPER")
-        ) {
-            human_score++;
-            resultMessage = `Human wins this round! ${humanChoice} beats ${computerChoice}`;
-        } else {
-            computer_score++;
-            resultMessage = `Computer wins this round! ${computerChoice} beats ${humanChoice}`;
-        }
+    if (computerChoice === humanChoice) {
+        resultMessage = `Draw! You both chose ${humanChoice}`;
+    } else if (
+        (humanChoice === "ROCK" && computerChoice === "SCISSORS") ||
+        (humanChoice === "PAPER" && computerChoice === "ROCK") ||
+        (humanChoice === "SCISSORS" && computerChoice === "PAPER")
+    ) {
+        human_score++;
+        resultMessage = `Human wins this round! ${humanChoice} beats ${computerChoice}`;
+    } else {
+        computer_score++;
+        resultMessage = `Computer wins this round! ${computerChoice} beats ${humanChoice}`;
+    }
 
-        updateScore(resultMessage); 
+    updateScore(resultMessage); 
 
     }
 
@@ -56,4 +56,8 @@ function updateScore(message) {
     document.getElementById("humanScore").textContent = human_score;
     document.getElementById("computerScore").textContent = computer_score;
     document.getElementById("result").textContent = message;
+}
+
+function checkGameWinner() {
+
 }

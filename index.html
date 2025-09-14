@@ -14,8 +14,8 @@
     </div>
 
     <h2>Score</h2>
-    <p>Human: <span id="human score">0</span></p>
-    <p>Computer: <span id="computer score">0</span></p>
+    <p>Human: <span id="humanScore">0</span></p>
+    <p>Computer: <span id="computerScore">0</span></p>
     <p id="result"></p>
 
     <script>
@@ -32,33 +32,8 @@
             })
 
 
-
-            // const round_result = playRound(computer_choice, human_choice)
-
-            if (round_result === "draw") {
-                console.log("No winner!");
-            } else if (round_result === "computer") {
-                computer_score++;
-            } else if (round_result === "human") {
-                human_score++;
-            } else {
-                console.log("Something is not right!"); 
-            }
         }
 
-        // console.log("Computer final score: " + computer_score);
-        // console.log("Human final score: " + human_score); 
-
-        // if (computer_score > human_score) {
-        //     console.log("Computer has won the game!")
-        //     console.log("Bye!!!");
-        // } else if (human_score > computer_score) {
-        //     console.log("Human has won the game!")
-        //     console.log("Bye!!!");        
-        // } else {
-        //     console.log("There is no winner!")
-        //     console.log("Bye!!!");        
-        // }
 
 
     </script>

@@ -48,4 +48,12 @@ function playRound(computerChoice, humanChoice) {
             resultMessage = `Computer wins this round! ${computerChoice} beats ${humanChoice}`;
         }
 
+        updateScore(resultMessage); 
+
     }
+
+function updateScore(message) {
+    document.getElementById("humanScore").textContent = human_score;
+    document.getElementById("computerScore").textContent = computer_score;
+    document.getElementById("result").textContent = message;
+}

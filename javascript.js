@@ -10,13 +10,10 @@ function getComputerChoice() {
     let computer_choice = "";
 
     if (rand < 0.34) {
-        console.log("Computer choice is Rock!")
         computer_choice = "ROCK"; 
     } else if (rand < 0.67) {
-        console.log("Computer choice is Paper!")
         computer_choice = "PAPER"; 
     } else {
-        console.log("Computer choice is Scissors!")
         computer_choice = "SCISSORS"; 
     }
 
@@ -24,10 +21,6 @@ function getComputerChoice() {
 
 }
 
-// function getHumanChoice() {
-//         let choice = prompt("Please type: Rock or Paper or Scissors");
-//         return choice; 
-//     }
 
 function playRound(computerChoice, humanChoice) {
     computerChoice = computerChoice.toUpperCase();
@@ -59,5 +52,19 @@ function updateScore(message) {
 }
 
 function checkGameWinner() {
+    if (human_score === 5 || computer_score === 5) {
+        let finalMessage = 
+            human_score === 5
+                ? "Human wins the game!!!"
+                : "Computer wins the game!!!"; 
+    
+        document.getElementById("result").textContent = finalMessage;
+        
+        // disable buttons after a win
+        document.querySelectorAll("#container button").forEach(button => {
+            button.disabled = true; 
+        })
+
+    }
 
 }

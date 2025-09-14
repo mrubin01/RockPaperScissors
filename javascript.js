@@ -42,6 +42,7 @@ function playRound(computerChoice, humanChoice) {
     }
 
     updateScore(resultMessage); 
+    checkGameWinner(); 
 
     }
 

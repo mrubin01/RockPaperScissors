@@ -21,9 +21,6 @@
     <script>
         // Your JavaScript goes here!
 
-        let computer_score = 0;
-        let human_score = 0;
-
         for (i = 5; i > 0; i--) {
 
             document.querySelectorAll("#container button").forEach(button => {
@@ -34,7 +31,9 @@
                 })
             })
 
-            const round_result = playRound(computer_choice, human_choice)
+
+
+            // const round_result = playRound(computer_choice, human_choice)
 
             if (round_result === "draw") {
                 console.log("No winner!");

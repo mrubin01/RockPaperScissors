@@ -1,10 +1,5 @@
-document.querySelectorAll("#container button").forEach(button => {
-    button.addEventListener("click", () => {
-        const humanChoice = button.id; 
-        const computerChoice = getComputerChoice();
-        playRound(computerChoice, humanChoice); 
-    })
-})
+let computer_score = 0;
+let human_score = 0;
 
 function getRandomNumber() {
         return Math.random();
@@ -37,27 +32,20 @@ function getComputerChoice() {
 function playRound(computerChoice, humanChoice) {
         computerChoice = computerChoice.toUpperCase();
         humanChoice = humanChoice.toUpperCase();
+        let resultMessage = "";
 
         if (computerChoice === humanChoice) {
-            console.log("DRAW!!!")
-            return "draw";
-        } else if (computerChoice === "ROCK" && humanChoice === "PAPER") {
-            console.log("Rock vs Paper: HUMAN WINS!!!")
-            return "human";
-        } else if (computerChoice === "ROCK" && humanChoice === "SCISSORS") {
-            console.log("Rock vs Scissors: COMPUTER WINS!!!")
-            return "computer";
-        } else if (computerChoice === "PAPER" && humanChoice === "ROCK") {
-            console.log("Paper vs Rock: COMPUTER WINS!!!")
-            return "computer";
-        } else if (computerChoice === "PAPER" && humanChoice === "SCISSORS") {
-            console.log("Paper vs Scissors: HUMAN WINS!!!")
-            return "human";
-        } else if (computerChoice === "SCISSORS" && humanChoice === "PAPER") {
-            console.log("Scissors vs Paper: COMPUTER WINS!!!")
-            return "computer";
-        } else if (computerChoice === "SCISSORS" && humanChoice === "ROCK") {
-            console.log("Scissors vs Rock: HUMAN WINS!!!")
-            return "human";
+            resultMessage = `Draw! You both chose ${humanChoice}`;
+        } else if (
+            (humanChoice === "ROCK" && computerChoice === "SCISSORS") ||
+            (humanChoice === "PAPER" && computerChoice === "ROCK") ||
+            (humanChoice === "SCISSORS" && computerChoice === "PAPER")
+        ) {
+            human_score++;
+            resultMessage = `Human wins this round! ${humanChoice} beats ${computerChoice}`;
+        } else {
+            computer_score++;
+            resultMessage = `Computer wins this round! ${computerChoice} beats ${humanChoice}`;
         }
+
     }
